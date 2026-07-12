@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TransitOps</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #f4f6f9;
+        }
+        
+        .navbar {
+            background: #0d6efd;
+            color: white;
+            padding: 15px;
+            font-size: 22px;
+        }
+        
+        .container {
+            display: flex;
+        }
+        
+        .sidebar {
+            width: 220px;
+            background: #212529;
+            height: 100vh;
+        }
+        
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+        }
+        
+        .sidebar a:hover {
+            background: #0d6efd;
+        }
+        
+        .content {
+            flex: 1;
+            padding: 25px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="navbar">
+        🚚 TransitOps Fleet Management
+    </div>
+
+    <div class="container">
+
+        <div class="sidebar">
+
+            <a href="/dashboard/">🏠 Dashboard</a>
+            <a href="/vehicles/">🚗 Vehicles</a>
+            <a href="/drivers/">👨‍✈️ Drivers</a>
+            <a href="/trips/">🛣️ Trips</a>
+            <a href="/fuel/">⛽ Fuel</a>
+            <a href="/maintenance/">🔧 Maintenance</a>
+            <a href="/reports/">📊 Reports</a>
+            <a href="/logout/">🚪 Logout</a>
+
+
+
+        </div>
+
+        <div class="content">
+
+            {% block content %} {% endblock %}
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
